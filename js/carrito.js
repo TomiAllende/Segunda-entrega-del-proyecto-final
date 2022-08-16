@@ -23,4 +23,20 @@ pedidx.shift
 console.log(pedidx)
 
 //Intento sumar pedidos a mi carrito
+ 
+let less =document.querySelector(".menos")
+let more = document.querySelector(".mas")
+let resultado =document.querySelector(".resultado")
+let cuenta = 0
 
+more.onclick = (e) => {
+    console.log(e)
+    cuenta += 1
+    resultado.innerText = cuenta
+}
+
+less.addEventListener("click", function(e){
+    console.log(e)
+    cuenta -= 1
+    resultado.innerText = cuenta
+})

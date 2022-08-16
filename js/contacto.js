@@ -10,6 +10,13 @@ function Persona(nombre,mail,mensaje) {
 const persona1 = new Persona ("Belen", "belenallende@hotmail.com", "gracias x su servicio")
 const persona2 =new Persona ("Inaki", "inakiallende@gmail.com", "feo servicio el suyo")
 
+//Armo JSON con mis datos de arriba
+
+const formatoJSON = JSON.stringify (persona1)
+console.log(typeof(formatoJSON))
+console.log(typeof(persona1))
+
+
 
 //Armo para valdar el submit en mi forms
 

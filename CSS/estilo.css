@@ -127,9 +127,7 @@
   justify-content: center; }
 
 .formulario {
-  display: inline-block; }
-
-form {
+  display: inline-block;
   margin-top: 4rem;
   padding: 15px;
   width: 300%;

@@ -1,10 +1,10 @@
 //Busco que el cliente decida que comidas consumira
 
-ordenes = prompt ("Ingrese que productos desea consumir")
-let serviciocliente= pedidos (ordenes)
+mensajeordenes.innerHTML = "<h2>Ingrese que productos desea consumir</h2>"
+let serviciocliente= pedidos (mensajeordenes)
 
-function pedidos (ordenes) {
-   let resultado = "Usted ha seleccionado" + ordenes
+function pedidos (mensajeordenes) {
+   let resultado = "Usted ha seleccionado" + mensajeordenes
     console.log(resultado)
 
     return resultado

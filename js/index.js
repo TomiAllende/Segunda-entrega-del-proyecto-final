@@ -1,24 +1,39 @@
-let nombre
-let apellido
-const espacio = ""
-nombre = prompt("Ingresa tu nombre")
-apellido = prompt("Ingresa tu apellido")
-console.log(typeof(apellido))
-console.log(apellido)
-console.log(nombre+espacio+apellido)
+let formulario = document.querySelector("#user")
+let errorusuario = document.querySelector("#errorMensaje")
+formulario.addEventListener(submit, afirmar)
 
-if((nombre != " " && nombre !=null) (apellido !=" " && apellido !=null)) {
-    alert("Hola"+ nombre + espacio + apellido)
-}
-else if(nombre != " ") {
-    alert("Hola"+ nombre)
-}
-else if(apellido !=" ") {
-    alert("Hola"+ apellido)
+function afirmar (e){
+    e.preventDefault()
+    letformArray = e.target
+    let nombre= formArray[0]
+    let apellido = formArray[1]
+    mensajealusuario.innerHTML =("Hola"+ nombre + apellido)
+
+console.log(errorusuario)
+
+if(!nombre.value){
+    errorusuario.style.display = "block"
+    errorusuario.innerText= "*Error! Debe agregar su nombre al forms"
 }
 else{
-    console.log("Usted no recibe mensaje porque no ingreso nada")
+    errorusuario.style.display = "none"
 }
+}
+
+
+
+//Armo Storage para traer de la base de datos la info del usuario
+
+localStorage.setItem("Nombre", "Tomi")
+console.log(LaBaseDeDatos)
+localStorage.setItem("Apellido", "Allende")
+
+letrecuperoStorage = localStorage.getItem("Nombre")
+console.log(typeof(recuperoStorage))
+
+
+
+
 
 //Armo regla de que los menores de edad no pueden realizar pedidos
 let edad = 6
